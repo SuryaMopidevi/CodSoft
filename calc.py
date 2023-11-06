@@ -14,8 +14,8 @@ def subtract(num1,num2):
     try :
         num1 = complex(num1)
         num2 = complex(num2)
-        result = max(num1.real,num2.real) - min(num1.real,num2.real)
-        print(f"{max(num1.real,num2.real)} - {min(num1.real,num2.real)} : {result.real}")
+        result = num1.real - num2.real
+        print(f"{num1.real} - {num2.real} : {result.real}")
     except ValueError:
         print("Invalid input. Please enter valid numeric values.")
 
@@ -34,8 +34,11 @@ def division(num1,num2):
     try :
         num1 = complex(num1)
         num2 = complex(num2)
-        result = max(num1.real,num2.real) // min(num1.real,num2.real)
-        print(f"{max(num1.real,num2.real)} // {min(num1.real,num2.real)} : {result.real}")
+        if num2.real==0:
+            print(f"{num1.real} / {num2.real} : NaN")
+        else:     
+            result = num1.real / num2.real
+            print(f"{num1.real} / {num2.real} : {result.real}")
     except ValueError:
         print("Invalid input. Please enter valid numeric values.")
 
@@ -54,7 +57,7 @@ elif operator == '-' :
     subtract(num1,num2)
 elif operator == '*' :
     product(num1,num2)
-elif operator == '//' :
+elif operator == '/' :
     division(num1,num2)
 else :
     print("invalid operator ")
