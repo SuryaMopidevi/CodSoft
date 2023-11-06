@@ -48,7 +48,7 @@ num1 = input("Enter the first number: ")
 num2 = input("Enter the second number: ")
 
 # taking input arithematic operator
-operator=input("Enter Operator(+,-,*,//) : ")
+operator=input("Enter Operator(+,-,*,/) : ")
 
 # checking an operator for performing operation
 if operator=='+' :
